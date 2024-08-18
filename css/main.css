@@ -579,12 +579,18 @@ pre .javascript .function {
   padding: 0 3px;
 }
 .group-picture-row {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   overflow: hidden;
 }
 .group-picture-column {
   float: left;
   margin-bottom: 10px;
+}
+.figcaption {
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
 }
 .post-body .label {
   color: #555;
@@ -1172,7 +1178,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffaa2e;
+  background: #d694b4;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
