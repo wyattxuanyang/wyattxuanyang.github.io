@@ -579,7 +579,7 @@ pre .javascript .function {
   padding: 0 3px;
 }
 .group-picture-row {
-  margin-bottom: 6px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 .group-picture-column {
@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8a1209;
+  background: #a412df;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
