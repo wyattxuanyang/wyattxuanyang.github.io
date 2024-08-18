@@ -586,12 +586,6 @@ pre .javascript .function {
   float: left;
   margin-bottom: 10px;
 }
-.figcaption {
-  text-align: center;
-  margin-top: 10px;
-  color: #333;
-  font-size: 14px;
-}
 .post-body .label {
   color: #555;
   display: inline;
@@ -1178,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d694b4;
+  background: #1775b3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
