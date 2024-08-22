@@ -393,7 +393,9 @@
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick';
+    var requiredFields = '<%= theme.comment.valine.requiredFields %>';
+    requiredFields = requiredFields.split(',');
     guest = guest.split(',').filter(item => {
       return GUEST.includes(item);
     });
@@ -407,10 +409,11 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       avatar     : 'mm',
       meta       : guest,
       pageSize   : '10' || 10,
-      visitor    : false,
+      visitor    : true,
       lang       : '' || 'zh-cn',
       path       : location.pathname,
-      recordIP   : false,
+      recordIP   : true,
+      requiredFields: requiredFields,
       serverURLs : 'https://6pyhdmdk.lc-cn-n1-shared.com'
     });
   }, window.Valine);
