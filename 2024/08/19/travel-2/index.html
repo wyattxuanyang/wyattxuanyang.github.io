@@ -210,6 +210,20 @@
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2024/08/19/travel-2/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/08/19/travel-2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
             <div class="post-description">白天排练的地点位于一个“前煤气罐”内，堪称再生建筑的典范，更有意思的是写下这篇游记，时通过当时拍摄的蛛丝马迹，定位我们位于哪个煤气罐内的过程；晚上随机出发逛街遇到了早有预谋的中央咖啡馆，在暮色中目睹了古老文明和现代生活共存的场景。</div>
 
         </div>
@@ -314,6 +328,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -466,6 +487,37 @@
   
 
   
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://wyattxuanyang.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://example.com/2024/08/19/travel-2/";
+    this.page.identifier = "2024/08/19/travel-2/";
+    this.page.title = "【游记】二：形态奇异的煤气罐大楼，暮色中古老和现代并存的市中心";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://wyattxuanyang.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
 
 </body>
 </html>
