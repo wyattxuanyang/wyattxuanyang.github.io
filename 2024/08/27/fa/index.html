@@ -21,31 +21,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
-<meta property="og:type" content="website">
-<meta property="og:title" content="轩阳的赛博居所">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="文献阅读 等变图神经网络 Frame AveragingICLR 2022 ORAL  目录：  概念说明和理论证明 实验细节设置、图的背景知识和代码分析  补充知识：  WL算法判断图同构 GIN网络 message-passing-GNN   参考资料： 【GNN】WL-test：GNN 的性能上界 (qq.com) KNN算法（k近邻算法）原理及总结-CSDN博客 搞懂DGCNN，这篇就够了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fa">
+<meta property="og:url" content="http://example.com/2024/08/27/fa/index.html">
 <meta property="og:site_name" content="轩阳的赛博居所">
-<meta property="og:description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
+<meta property="og:description" content="文献阅读 等变图神经网络 Frame AveragingICLR 2022 ORAL  目录：  概念说明和理论证明 实验细节设置、图的背景知识和代码分析  补充知识：  WL算法判断图同构 GIN网络 message-passing-GNN   参考资料： 【GNN】WL-test：GNN 的性能上界 (qq.com) KNN算法（k近邻算法）原理及总结-CSDN博客 搞懂DGCNN，这篇就够了">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-27T15:43:08.000Z">
+<meta property="article:modified_time" content="2024-08-27T16:01:26.923Z">
 <meta property="article:author" content="Wyatt">
-<meta property="article:tag" content="旅行|人工智能|可能好玩的日常">
+<meta property="article:tag" content="论文阅读">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2024/08/27/fa/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>轩阳的赛博居所</title>
+  <title>fa | 轩阳的赛博居所</title>
   
 
 
@@ -76,119 +78,7 @@
   </style>
 </noscript>
 
-<style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -256,458 +146,10 @@ mjx-container[display="true"] + br {
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/27/%E5%88%9B%E5%8D%9A%E6%96%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wyatt">
-      <meta itemprop="description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="轩阳的赛博居所">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/07/27/%E5%88%9B%E5%8D%9A%E6%96%87/" class="post-title-link" itemprop="url">创博文</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-07-27 03:05:40 / 修改时间：22:44:12" itemprop="dateCreated datePublished" datetime="2024-07-27T03:05:40+08:00">2024-07-27</time>
-            </span>
-
-          
-            <span id="/2024/07/27/%E5%88%9B%E5%8D%9A%E6%96%87/" class="post-meta-item leancloud_visitors" data-flag-title="创博文" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2024/07/27/%E5%88%9B%E5%8D%9A%E6%96%87/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2024/07/27/%E5%88%9B%E5%8D%9A%E6%96%87/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>大家好！我是裴轩阳，也可以叫我Wyatt。</p>
-<p>想写博客很久了。起因大概是一直以来，自己都在用typora或者notion做课内或论文阅读的笔记&#x2F;写一些自己喜欢的东西，但是这样只能在本地浏览，或者在很有限的范围内分享。在身边，也有同学利用小红书、公众号、知乎等平台进行一些感想和知识的记录，这启发了我采用类似的方式进行分享。我决定搭建一个自己的博客，希望在这里记录一些我的旅行记忆&#x2F;学习笔记&#x2F;读书笔记等等。</p>
-<img src="/2024/07/27/%E5%88%9B%E5%8D%9A%E6%96%87/meandbird.jpg" alt="我（右一）" style="width: 50%; height: auto;">
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/24/ml-pr/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wyatt">
-      <meta itemprop="description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="轩阳的赛博居所">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/08/24/ml-pr/" class="post-title-link" itemprop="url">机器学习&模式识别相关知识整理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-08-24 16:05:44" itemprop="dateCreated datePublished" datetime="2024-08-24T16:05:44+08:00">2024-08-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-26 14:10:31" itemprop="dateModified" datetime="2024-08-26T14:10:31+08:00">2024-08-26</time>
-              </span>
-
-          
-            <span id="/2024/08/24/ml-pr/" class="post-meta-item leancloud_visitors" data-flag-title="机器学习&模式识别相关知识整理" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2024/08/24/ml-pr/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2024/08/24/ml-pr/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>关于人工智能专业课程【机器学习】【模式识别】相关知识点的整理m，内容包括：最小错误率和最小风险贝叶斯，线性判别函数及Fisher准则/感知机准则/最小平方误差准则，SVM的详细推导证明，主成分分析及其与SVD关系</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/24/ml-pr/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/27/travel-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wyatt">
-      <meta itemprop="description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="轩阳的赛博居所">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/07/27/travel-1/" class="post-title-link" itemprop="url">【游记】序：永远年轻，永远在路上</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-07-27 03:27:57 / 修改时间：23:10:31" itemprop="dateCreated datePublished" datetime="2024-07-27T03:27:57+08:00">2024-07-27</time>
-            </span>
-
-          
-            <span id="/2024/07/27/travel-1/" class="post-meta-item leancloud_visitors" data-flag-title="【游记】序：永远年轻，永远在路上" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2024/07/27/travel-1/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2024/07/27/travel-1/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>其实我好像一直在路上。</p>
-<img src="/2024/07/27/travel-1/1.png" alt="夕照中的斯蒂芬大教堂，位于维也纳市中心" style="width: 90%; height: auto;">
-
-<p>我小时候喜欢看的书有很多。我喜欢到少儿图书馆看摆在那里一排排的多啦A梦和诸如《太空历险记》《秦始皇陵历险记》《埃及寻宝记》之类的漫画，或者也喜欢看那些很有意思的小说，诸如查理九世怪物大师冒险小虎队笑猫日记，等等吧。</p>
-<p>不过我想对我产生最大影响的 恐怕还是那些游记。可能是被老妈要求读一些“可以学到东西的书”（或者我自己翻着翻着感兴趣了）我第一次读了《千年一叹》，然后好像很久都没有回过神。那时候我四年级，每次一翻开书似乎都能徜徉在底格里斯河畔的烤鱼或者看到某条路上长得像棺材的五颜六色的大卡车在身边开过，看戈兰高地的孩子和作者在墙上留下的和平字眼，看金字塔下的阿依达还有尼泊尔回中国的白色大门。由此一发不可收拾，先是读了《行者无疆》，然后又疯了一样冲进图书馆一楼（那时候的游记都在广州图书馆一楼西侧，不知道现在还在不在）借游记来看。其中有一本书好像是一个两个字的人写的（我觉得他可能叫王丹），书名不知道是不是在路上（不是杰克凯鲁亚克那本），印象深刻的有两句话。第一句话是作者在某处海上鼓起勇气跳进海里时的感慨：</p>
-<p>“既然不能增加生命的长度，那么就尽量去扩展它的宽度吧。让我们趁年轻，尽情地疯狂、撒野、做梦、行走！”</p>
-<p>第二句则是作者引用的徐霞客的一句话：“而世之奇伟、瑰怪，非常之观，常在于险远，而人之所罕至焉，故非有志者不能至也。”</p>
-<p>在那个互联网还没有那么发达的时代，我从文字里感受到了作者走过的地方，走过冰岛车站的活动室，奥地利的酒窖和柬埔寨迷人的高棉微笑。哦，或许我喜欢看这些书和我妈小时候带着我看旅游节目（好像有一个电视台叫游轮旅游，还有个是啥忘记了，广告词是三个字+三个字的，但是也不记得，似乎是心再远balabala）有关系。</p>
-<p>说了那么多，其实就是想说，我最近也走过了国外的一些地方，将来可能会走到更多的地方。刚好我也喜欢写一些东西（不幸的是，上了大学以后心浮躁的很，很少能专注地做一件事，例如写文字）。如果可能的话，我希望能记录下我走过的印象深刻的地方，记录下我看到的人和事，记录下同行的有意思的灵魂，也让更多的人能看到这个世界的美好地方（或者仅仅只是提供一个不一样的视角，这也很好）。在路上不只是一种态度，人只活一回，我觉得更要尽可能地了解我们所生存的这个世界。更何况，探索世界的同时说不定也可以发现更加不受限制的自己呢（我就深有体会）！</p>
-<p>以上，可能可以作为序吧。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/27/travel-11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wyatt">
-      <meta itemprop="description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="轩阳的赛博居所">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/07/27/travel-11/" class="post-title-link" itemprop="url">【游记】一：十个小时的飞行</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-07-27 15:29:55" itemprop="dateCreated datePublished" datetime="2024-07-27T15:29:55+08:00">2024-07-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-18 04:23:45" itemprop="dateModified" datetime="2024-08-18T04:23:45+08:00">2024-08-18</time>
-              </span>
-
-          
-            <span id="/2024/07/27/travel-11/" class="post-meta-item leancloud_visitors" data-flag-title="【游记】一：十个小时的飞行" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2024/07/27/travel-11/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2024/07/27/travel-11/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><u>烫头与迈向世界的第一步 | 维也纳的初印象 | 博物馆精美的展品</u><br>能去奥地利，是我意料之外的事情。我在大二上的时候误打误撞地加入了合唱团（时隔7～8年之后），在团里还没待够一年呢，就要跟团前往维也纳参加世界和平合唱节。接到通知的时候是23年5月左右，这也将是我的第一次出国经历。为此，我还特意回广州烫了个头（其实本意是经过这学期计组和各大课程的折磨想回家里躺几天，顺便烫了个头），为的是让自己看起来成熟一些不容易上当。虽然后来看看这些都是多虑，不过我确实挺喜欢新发型的。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/07/27/travel-11/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/19/travel-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wyatt">
-      <meta itemprop="description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="轩阳的赛博居所">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/08/19/travel-2/" class="post-title-link" itemprop="url">【游记】二：形态奇异的煤气罐大楼，暮色中古老和现代并存的市中心</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-08-19 01:53:30" itemprop="dateCreated datePublished" datetime="2024-08-19T01:53:30+08:00">2024-08-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-25 02:07:37" itemprop="dateModified" datetime="2024-08-25T02:07:37+08:00">2024-08-25</time>
-              </span>
-
-          
-            <span id="/2024/08/19/travel-2/" class="post-meta-item leancloud_visitors" data-flag-title="【游记】二：形态奇异的煤气罐大楼，暮色中古老和现代并存的市中心" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2024/08/19/travel-2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2024/08/19/travel-2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>白天排练的地点位于一个“前煤气罐”内，堪称再生建筑的典范，更有意思的是写下这篇游记，时通过当时拍摄的蛛丝马迹，定位我们位于哪个煤气罐内的过程；晚上随机出发逛街遇到了早有预谋的中央咖啡馆，在暮色中目睹了古老文明和现代生活共存的场景。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/19/travel-2/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -723,10 +165,9 @@ mjx-container[display="true"] + br {
       <meta itemprop="name" content="轩阳的赛博居所">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/08/27/fa/" class="post-title-link" itemprop="url">fa</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          fa
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -777,7 +218,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="文献阅读-等变图神经网络-Frame-Averaging"><a href="#文献阅读-等变图神经网络-Frame-Averaging" class="headerlink" title="文献阅读 等变图神经网络 Frame Averaging"></a>文献阅读 等变图神经网络 Frame Averaging</h1><p><strong>ICLR 2022 ORAL</strong></p>
+        <h1 id="文献阅读-等变图神经网络-Frame-Averaging"><a href="#文献阅读-等变图神经网络-Frame-Averaging" class="headerlink" title="文献阅读 等变图神经网络 Frame Averaging"></a>文献阅读 等变图神经网络 Frame Averaging</h1><p><strong>ICLR 2022 ORAL</strong></p>
 <hr>
 <p><strong>目录：</strong></p>
 <ol>
@@ -921,131 +362,40 @@ mjx-container[display="true"] + br {
 <p><code>invert_latent_frame</code>函数：这个是在decoder之前用的。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">invert_latent_frame</span>(<span class="params">pnts, F_ops, batch_size, n_nodes, center</span>):</span><br><span class="line">    pnts = pnts.view(<span class="number">8</span>, batch_size, n_nodes, -<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">    pnts = pnts.transpose(<span class="number">0</span>,<span class="number">1</span>)</span><br><span class="line">    framed_input = torch.einsum(<span class="string">&#x27;boij,bopfj-&gt;bopfi&#x27;</span>,F_ops, pnts) </span><br><span class="line">    framed_input = framed_input.mean(<span class="number">1</span>) </span><br><span class="line">    <span class="keyword">if</span> center <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        framed_input = framed_input + center.transpose(<span class="number">1</span>,<span class="number">2</span>).unsqueeze(-<span class="number">2</span>)</span><br><span class="line">    framed_input = framed_input.contiguous()</span><br><span class="line">    framed_input = framed_input.view(batch_size,-<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">return</span> framed_input</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" rel="tag"># 论文阅读</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/27/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Wyatt">
-      <meta itemprop="description" content="相关功能正在完善中...关于以下问题，欢迎随时分享你的经验:  1. 我应该怎样在grouppicture的环境下使得图片标题正常显示?已经尝试过的方法包括但不限于使用html语言和markdown内置的方式直接包裹m, 更改grouppicture的css文件, etc.2. 有什么推荐的欧洲旅行住宿地址？">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="轩阳的赛博居所">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/07/27/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-07-27 02:15:16" itemprop="dateCreated datePublished" datetime="2024-07-27T02:15:16+08:00">2024-07-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-23 03:14:22" itemprop="dateModified" datetime="2024-08-23T03:14:22+08:00">2024-08-23</time>
-              </span>
-
-          
-            <span id="/2024/07/27/hello-world/" class="post-meta-item leancloud_visitors" data-flag-title="Hello World" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2024/07/27/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2024/07/27/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p>bug：</p>
-<ol>
-<li>3变成2的顶栏显示（1,2,3的跳转）</li>
-<li>浏览量</li>
-<li>分类</li>
-</ol>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/08/24/ml-pr/" rel="prev" title="机器学习&模式识别相关知识整理">
+      <i class="fa fa-chevron-left"></i> 机器学习&模式识别相关知识整理
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1092,6 +442,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB-%E7%AD%89%E5%8F%98%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-Frame-Averaging"><span class="nav-number">1.</span> <span class="nav-text">文献阅读 等变图神经网络 Frame Averaging</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%83%A8%E5%88%86%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">实验部分：</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
